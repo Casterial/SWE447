@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+ attribute vec4 vPosition;
+ void Cone-vertex-shader()
+{
+	gl_Position = vPosition;
+}
+ void Cone-fragment-Shader()
+{
+    gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+}
   <script src="../Common/webgl-utils.js"></script>
-  <script src="../Assignment-2/clear.js"></script>
+  <script src="../Assignment-3/Cone.js"></script>
+  <script src="../Assignment-3/initShaders.js"></script>
+  <script src="../Assignment-3/cone.js"></script>
 </head>
 <body>
   <canvas id="webgl-canvas" width="512" height="512" style="background-color: #0000FF"></canvas>
