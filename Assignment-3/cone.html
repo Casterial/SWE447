@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script id="Cone-vertex-shader" type="x-shader/x-vertex">
  attribute vec4 vPosition;
- void Cone-vertex-shader()
+void main()
 {
 	gl_Position = vPosition;
 }
- void Cone-fragment-Shader()
+void main()
 {
     gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
 }
+</script>
   <script src="../Common/webgl-utils.js"></script>
   <script src="../Assignment-3/Cone.js"></script>
   <script src="../Assignment-3/initShaders.js"></script>
