@@ -1,30 +1,3 @@
-
-Skip to content
-This repository
-
-    Pull requests
-    Issues
-    Gist
-
-    @LShelton
-
-0
-0
-
-    0
-
-dgrimes-gde/SWE447-Projects
-Code
-Issues 0
-Pull requests 0
-Projects 0
-Wiki
-Pulse
-Graphs
-SWE447-Projects/Common/MV.js
-9974356 5 hours ago
-@dgrimes-gde dgrimes-gde Commit three files to common directory
-966 lines (797 sloc) 21.4 KB
 //////////////////////////////////////////////////////////////////////////////
 //
 //  MV.js
@@ -990,8 +963,3 @@ function normalMatrix(m, flag)
     }
 
 }
-
-    Contact GitHub API Training Shop Blog About 
-
-    © 2017 GitHub, Inc. Terms Privacy Security Status Help 
-
