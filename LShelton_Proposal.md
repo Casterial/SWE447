@@ -22,3 +22,7 @@ I intend to implement this program using OpenGL library with C++ to allow me to 
 * 3 cubes for borders to make a confined space
 * Arcball sphere model found online, or self-created.
 * Rotating object cube
+
+### **Online Resources:**
+http://www.khronos.org/opengl/wiki/Object_Mouse_Trackball
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwjC4O3uqYzTAhVBMGMKHQvZAsAQFggpMAE&url=http%3A%2F%2Fwww3.cs.stonybrook.edu%2F~mueller%2Fteaching%2Fcse564%2Ftrackball.ppt&usg=AFQjCNGSsH8qE3LpujepSI2K4hTtbmEkKA&sig2=aQFWirB5L9F61q31PfnxJg
