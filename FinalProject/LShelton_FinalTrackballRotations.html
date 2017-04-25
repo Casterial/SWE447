@@ -5,14 +5,16 @@
 
         <script>
             var camera, controls, scene, renderer;
-            var objects=[];
+            var CubeInScene=[];
 	
             init();
             animate();
 
             function init(){
-                camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
-                camera.position.z = 500;
+			<!-- window.innerHeight, 1, ###### may change this is the zoom until it vanishes into canvas. -->
+                camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 1, 10000);
+				<!-- change the axis to lock that axis. -->
+                camera.position.z = 45;
 
                 controls = new THREE.TrackballControls( camera );
 
@@ -21,10 +23,12 @@
                 var geometry = new THREE.CubeGeometry(100,100,100);
                 var material = new THREE.MeshNormalMaterial();
 
-                for (var i = 0;i<100;i++){
+                for (var i = 0; i < 100; i++){
                     var mesh = new THREE.Mesh( geometry, material);
+					<!-- Allows them to be placed more close, or more further apart randomly. -->
+					<!-- Math.random() - # (must be beween 0 and 1) -->
                     mesh.position.x = ( Math.random() - 0.5) * 2000;
-                    mesh.position.y = ( Math.random() - 0.5) * 2000;
+                    mesh.position.y = ( Math.random() - 1.0) * 3500;
                     mesh.position.z = ( Math.random() - 0.5) * 2000;
 
                     mesh.rotation.x = Math.random();
@@ -32,10 +36,8 @@
                     mesh.rotation.z = Math.random();
                   
                     scene.add(mesh);
-                    objects.push(mesh);
+                    CubeInScene.push(mesh);
                 }
-
-
 
                 renderer = new THREE.WebGLRenderer();
                 renderer.setSize(window.innerWidth, window.innerHeight)
@@ -43,8 +45,9 @@
             }
 
             function animate(){
-                objects.forEach(function(obj){
-                  obj.rotation.x+=.01;
+                CubeInScene.forEach(function(obj){
+				<!-- Object Rotation Speed Value, change to make them faster or slower. -->
+                  obj.rotation.x+=.03;
                 });
                 requestAnimationFrame( animate );
                 controls.update();
